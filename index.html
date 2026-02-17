@@ -1,0 +1,265 @@
+<!--
+===============================================
+FILE: index.html
+PURPOSE: Main page for Sebastian Larsen's developer portfolio
+PROJECT: 1.1 Personal Developer Portfolio
+AUTHOR: Sebastian Larsen (SkinShredder)
+DATE: 2026-02-17
+===============================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sebastian Larsen — AI Student & Developer at SDU Odense. Portfolio showcasing projects in Python, Java, and more.">
+
+    <title>Sebastian Larsen | AI Student & Developer</title>
+
+    <!-- Fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#hero" class="nav__logo">SkinShredder</a>
+
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger menu button (mobile) -->
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero section" id="hero">
+            <div class="container">
+                <p class="hero__greeting">Hi, I'm</p>
+                <h1 class="hero__name">Sebastian Larsen</h1>
+                <p class="hero__tagline">AI Student & Developer @ SDU Odense</p>
+                <p class="hero__description">
+                    I build software from idea to deployment — learning every step of the way.
+                    Currently studying Artificial Intelligence and exploring the intersection
+                    of clean code, data science, and machine learning.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#projects" class="btn btn--primary">View Projects</a>
+                    <a href="https://github.com/SkinShredder" target="_blank" rel="noopener noreferrer"
+                        class="btn btn--outline">GitHub</a>
+                    <a href="#contact" class="btn btn--outline">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title">About Me</h2>
+                <div class="about__content">
+                    <p>
+                        I'm a 24-year-old AI student at the University of Southern Denmark (SDU)
+                        in Odense, currently in my 2nd semester. My courses cover data science,
+                        discrete mathematics, and object-oriented programming — and I'm building
+                        real projects alongside my studies to put theory into practice.
+                    </p>
+                    <p>
+                        I believe in understanding the "why" behind everything I build.
+                        I don't just want code that works — I want to know how and why it works.
+                        Every project on this site is built from scratch as a learning experience.
+                    </p>
+                    <p>
+                        Outside of code, I'm into fitness, football, gaming, and music.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS SECTION ==================== -->
+        <section class="skills section section--alt" id="skills">
+            <div class="container">
+                <h2 class="section__title">Skills</h2>
+
+                <!-- Skills Grid — add/remove cards here to update -->
+                <div class="skills__grid">
+
+                    <div class="skill-card">
+                        <h3 class="skill-card__title">Python</h3>
+                        <p class="skill-card__level">Beginner–Intermediate</p>
+                        <p class="skill-card__description">MVC architecture, OOP, file I/O, GUI development</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-card__title">Java</h3>
+                        <p class="skill-card__level">Beginner–Intermediate</p>
+                        <p class="skill-card__description">OOP principles, classes, inheritance, encapsulation</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-card__title">SQL</h3>
+                        <p class="skill-card__level">Beginner</p>
+                        <p class="skill-card__description">PostgreSQL, SELECT, JOIN, WHERE, relational algebra</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-card__title">Git & GitHub</h3>
+                        <p class="skill-card__level">Beginner</p>
+                        <p class="skill-card__description">Version control, commits, push/pull, repositories</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-card__title">HTML, CSS & JS</h3>
+                        <p class="skill-card__level">Currently Learning</p>
+                        <p class="skill-card__description">Building this portfolio from scratch!</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS SECTION ==================== -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section__title">Projects</h2>
+
+                <!--
+                    PROJECT CARDS — How to add a new project:
+                    1. Copy one <article class="project-card"> block
+                    2. Update the title, description, tags, and links
+                    3. Add a screenshot to assets/images/ and update the src
+                    That's it!
+                -->
+                <div class="projects__grid">
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <img src="assets/images/Enigma.png" alt="Enigma Machine Simulator screenshot">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Enigma Machine Simulator</h3>
+                            <p class="project-card__description">
+                                A Python simulation of the WWII Enigma encryption machine.
+                                Built with MVC architecture, featuring a GUI interface, configurable
+                                rotor classes, plugboard, and full encryption/decryption logic.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">MVC</span>
+                                <span class="tag">GUI</span>
+                                <span class="tag">OOP</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com/SkinShredder/enigma-part2" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn--small">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <img src="assets/images/BankApp.png" alt="OOP BankApp screenshot">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">OOP BankApp</h3>
+                            <p class="project-card__description">
+                                A terminal-based banking application built in Java.
+                                Full OOP design following SOLID principles with account management,
+                                transactions, and encapsulated business logic.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">OOP</span>
+                                <span class="tag">SOLID</span>
+                                <span class="tag">Terminal</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com/SkinShredder/oop-bankapp" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn--small">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder">🌐 You're looking at it!</div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Developer Portfolio</h3>
+                            <p class="project-card__description">
+                                This website! Built from scratch with vanilla HTML, CSS, and
+                                JavaScript. No frameworks, no templates — every line written by hand
+                                as a learning project. Features responsive design, CSS custom
+                                properties, and semantic HTML.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <div class="project-card__links">
+                                <!-- TODO: Update with actual repo URL -->
+                                <a href="https://github.com/SkinShredder" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn--small">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section class="contact section section--alt" id="contact">
+            <div class="container">
+                <h2 class="section__title">Get in Touch</h2>
+                <p class="contact__text">
+                    Interested in collaborating or have a question? Feel free to reach out.
+                </p>
+                <div class="contact__links">
+                    <a href="mailto:Sebastian12Larsen@gmail.com" class="btn btn--primary">Email Me</a>
+                    <a href="https://github.com/SkinShredder" target="_blank" rel="noopener noreferrer"
+                        class="btn btn--outline">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sebastian-larsen-4b46213b1/" target="_blank"
+                        rel="noopener noreferrer" class="btn btn--outline">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sebastian Larsen. Built from scratch with HTML, CSS & JS.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
