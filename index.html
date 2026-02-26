@@ -131,8 +131,8 @@ DATE: 2026-02-17
 
                     <div class="skill-card">
                         <h3 class="skill-card__title">HTML, CSS & JS</h3>
-                        <p class="skill-card__level">Currently Learning</p>
-                        <p class="skill-card__description">Building this portfolio from scratch!</p>
+                        <p class="skill-card__level">Beginner–Intermediate</p>
+                        <p class="skill-card__description">DOM manipulation, CSS animations, localStorage, responsive design, SVG</p>
                     </div>
 
                 </div>
@@ -144,20 +144,101 @@ DATE: 2026-02-17
             <div class="container">
                 <h2 class="section__title">Projects</h2>
 
-                <!--
-                    PROJECT CARDS — How to add a new project:
-                    1. Copy one <article class="project-card"> block
-                    2. Update the title, description, tags, and links
-                    3. Add a screenshot to assets/images/ and update the src
-                    That's it!
-                -->
-                <div class="projects__grid">
+                <!-- Filter bar -->
+                <div class="projects__filters" id="project-filters">
+                    <div class="filter-group">
+                        <span class="filter-group__label">Type:</span>
+                        <button class="filter-btn active" data-filter-type="all">All</button>
+                        <button class="filter-btn" data-filter-type="web">Web</button>
+                        <button class="filter-btn" data-filter-type="cli">CLI</button>
+                        <button class="filter-btn" data-filter-type="desktop">Desktop</button>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-group__label">Language:</span>
+                        <button class="filter-btn active" data-filter-lang="all">All</button>
+                        <button class="filter-btn" data-filter-lang="python">Python</button>
+                        <button class="filter-btn" data-filter-lang="java">Java</button>
+                        <button class="filter-btn" data-filter-lang="html-css-js">HTML/CSS/JS</button>
+                    </div>
+                </div>
 
-                    <article class="project-card">
+                <!-- No results message -->
+                <p class="projects__empty hidden" id="projects-empty">No projects match the selected filters.</p>
+
+                <div class="projects__grid" id="projects-grid">
+
+                    <!-- Quiz Game (newest first) -->
+                    <article class="project-card" data-type="web" data-lang="html-css-js" data-date="2026-02-26">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder">🎮 Interactive Quiz Game</div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__type">Web</span>
+                                <time class="project-card__date" datetime="2026-02-26">Feb 26, 2026</time>
+                            </div>
+                            <h3 class="project-card__title">Interactive Quiz Game</h3>
+                            <p class="project-card__description">
+                                A multi-category quiz game with 1,296 questions across 8 categories
+                                and 3 difficulty levels. Features a user system with SVG avatars, PIN
+                                login, streak bonus scoring, post-game review, and full CSS animations.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">localStorage</span>
+                                <span class="tag">SVG</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://skinshredder.github.io/quiz-game/" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn--small">Live Demo</a>
+                                <a href="https://github.com/SkinShredder/quiz-game" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn--small btn--small-outline">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Developer Portfolio -->
+                    <article class="project-card" data-type="web" data-lang="html-css-js" data-date="2026-02-18">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder">🌐 You're looking at it!</div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__type">Web</span>
+                                <time class="project-card__date" datetime="2026-02-18">Feb 18, 2026</time>
+                            </div>
+                            <h3 class="project-card__title">Developer Portfolio</h3>
+                            <p class="project-card__description">
+                                This website! Built from scratch with vanilla HTML, CSS, and
+                                JavaScript. No frameworks, no templates — every line written by hand
+                                as a learning project. Features responsive design, CSS custom
+                                properties, and semantic HTML.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com/SkinShredder/skinshredder.github.io" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn--small">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Enigma Machine -->
+                    <article class="project-card" data-type="desktop" data-lang="python" data-date="2025-12-01">
                         <div class="project-card__image">
                             <img src="assets/images/Enigma.png" alt="Enigma Machine Simulator screenshot">
                         </div>
                         <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__type">Desktop</span>
+                                <time class="project-card__date" datetime="2025-12-01">Dec 2025</time>
+                            </div>
                             <h3 class="project-card__title">Enigma Machine Simulator</h3>
                             <p class="project-card__description">
                                 A Python simulation of the WWII Enigma encryption machine.
@@ -177,11 +258,16 @@ DATE: 2026-02-17
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <!-- OOP BankApp -->
+                    <article class="project-card" data-type="cli" data-lang="java" data-date="2025-11-01">
                         <div class="project-card__image">
                             <img src="assets/images/BankApp.png" alt="OOP BankApp screenshot">
                         </div>
                         <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__type">CLI</span>
+                                <time class="project-card__date" datetime="2025-11-01">Nov 2025</time>
+                            </div>
                             <h3 class="project-card__title">OOP BankApp</h3>
                             <p class="project-card__description">
                                 A terminal-based banking application built in Java.
@@ -196,31 +282,6 @@ DATE: 2026-02-17
                             </div>
                             <div class="project-card__links">
                                 <a href="https://github.com/SkinShredder/oop-bankapp" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn--small">GitHub</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-card__image">
-                            <div class="project-card__placeholder">🌐 You're looking at it!</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Developer Portfolio</h3>
-                            <p class="project-card__description">
-                                This website! Built from scratch with vanilla HTML, CSS, and
-                                JavaScript. No frameworks, no templates — every line written by hand
-                                as a learning project. Features responsive design, CSS custom
-                                properties, and semantic HTML.
-                            </p>
-                            <div class="project-card__tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Responsive</span>
-                            </div>
-                            <div class="project-card__links">
-                                <a href="https://github.com/SkinShredder/skinshredder.github.io" target="_blank" rel="noopener noreferrer"
                                     class="btn btn--small">GitHub</a>
                             </div>
                         </div>
